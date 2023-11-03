@@ -21,20 +21,21 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+
+	@font-face {
+		font-family: 'Geist';
+		src: url('/fonts/Geist-Medium.woff2') format('woff2');
+	}
+	@font-face {
+		font-family: 'Geist-bold';
+		src: url('/fonts/Geist-Bold.woff2') format('woff2');
+	}
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--black: #000000;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #000000;
+		font-family: 'Geist', system-ui, sans-serif;
+		background: var(--black);
 		background-size: 224px;
 	}
 	code {
