@@ -1,27 +1,45 @@
 ---
+import Dots from '../components/Dots.astro';
+import SearchInput from '../components/SearchInput.svelte';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Change the way you eat and generate new recipes every day</h1>
-	</main>
+<Layout title="Foodi">
+	<section class="flex flex-col">
+		<h1>Change the way you 
+			<span class="marker">eat</span> and <br> 
+			<span class="gradient">generate new recipes every day</span>
+		</h1>
+	</section>
+	<SearchInput />
+	<Dots />
 </Layout>
 
 <style>
-	h1{
-		font-size: 3.5rem;
-		line-height: 3rem;
-		font-weight: 500;
-		text-align: center;
+	
+	section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 140px 180px 0px 180px;
 	}
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
+	
+	h1{
+		font-size: 50px;
+		line-height: 60px;
+		text-align: center;
+		color: #fff;
+	}
+
+	h1 .marker{
+		border: #fff solid 4px;
+		padding: 0px 10px;
+		border-radius: 10px;
+	}
+
+	h1 .gradient{
+		background: linear-gradient(#9E7AFF, #FE8BBB);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 </style>
